@@ -44,7 +44,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.exp))
                     user.exp = 0
                 if (!isNumber(user.limit))
-                    user.limit = 10
+                    user.limit = 100
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
                 if (!('registered' in user))
@@ -75,7 +75,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.money))
                     user.money = 0
                 if (!isNumber(user.health))
-                    user.health = 100
+                    user.health = 1000
                 if (!isNumber(user.limit))
                     user.limit = 0
                 if (!isNumber(user.potion))
@@ -175,7 +175,7 @@ export async function handler(chatUpdate) {
             } else
                 db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    limit: 100,
                     lastclaim: 0,
                     registered: false,
                     name: m.name,
@@ -190,7 +190,7 @@ export async function handler(chatUpdate) {
                     autolevelup: true,
 
                     money: 0,
-                    health: 100,
+                    health: 1000,
                     limit: 100,
                     potion: 10,
                     trash: 0,
@@ -261,7 +261,7 @@ export async function handler(chatUpdate) {
                 if (!('sDemote' in chat))
                     chat.sDemote = ''
                 if (!('delete' in chat))
-                    chat.delete = true
+                    chat.delete = false
                 if (!('antiLink' in chat))
                     chat.antiLink = false
                 if (!('viewonce' in chat))
@@ -279,7 +279,7 @@ export async function handler(chatUpdate) {
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
-                    delete: true,
+                    delete: false,
                     antiLink: false,
                     viewonce: false,
                     antiToxic: true,
@@ -625,18 +625,18 @@ export async function participantsUpdate({ id, participants, action }) {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || Connection.conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
-                            (chat.sBye || this.bye || Connection.conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || Connection.conn.welcome || 'Halo *@user*, Selamat Datang Di Grup *@subject*.\nJangan Lupa Patuhi Rules Grup Ya ☝️😅').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
+                            (chat.sBye || this.bye || Connection.conn.bye || 'Sayonara, @user!')).replace('@user', '@' + user.split('@')[0])
                         this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
                     }
                 }
             }
             break
         case 'promote':
-            text = (chat.sPromote || this.spromote || Connection.conn.spromote || '@user ```is now Admin```')
+            text = (chat.sPromote || this.spromote || Connection.conn.spromote || '*「 Auto Detect 」*\n@user ```Is Now Admin```')
         case 'demote':
             if (!text)
-                text = (chat.sDemote || this.sdemote || Connection.conn.sdemote || '@user ```is no longer Admin```')
+                text = (chat.sDemote || this.sdemote || Connection.conn.sdemote || '*「 Auto Detect 」*\n@user ```Is No Longer As Admin```')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)
                 this.sendMessage(id, { text, mentions: this.parseMention(text) })
@@ -703,15 +703,15 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-        owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-        mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-        group: 'Perintah ini hanya dapat digunakan di grup!',
-        private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
+        rowner: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
+        owner: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
+        mods: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
+        premium: '❌Command Rejected❌\n\nOnly Can Be Used By Premium User',
+        group: '❌Command Rejected❌\n\nOnly Can Be Used In a Group',
+        private: '❌Command Rejected❌\n\nOnly Can Be Used At Private Message',
+        admin: '❌Command Rejected❌\n\nOnly Can Be Used By Admin',
+        botAdmin: '❌Command Rejected❌\n\nJadikan Bot Sebagai *Admin* Untuk Menggunakan Perintah Ini!',
+        unreg: '❌Command Rejected❌\n\nSilahkan Daftar Untuk Menggunakan Fitur Ini Dengan Cara Mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Cocopie.15*',
         restrict: 'Fitur ini di *disable*!'
     }[type]
     if (msg) return m.reply(msg)
