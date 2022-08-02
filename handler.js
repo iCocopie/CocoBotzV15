@@ -703,7 +703,7 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
+        rowner: '❌Command Rejected❌\n\nOnly Can Be Used By Owner !',
         owner: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
         mods: '❌Command Rejected❌\n\nOnly Can Be Used By Owner',
         premium: '❌Command Rejected❌\n\nOnly Can Be Used By Premium User',
