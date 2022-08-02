@@ -1,4 +1,4 @@
-# Games-Wabot
+# CocoBot
 
 <a href="https://github.com/BochilGaming/games-wabot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/BochilGaming/games-wabot?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/BochilGaming/games-wabot/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/BochilGaming/games-wabot?label=Watchers&color=green&style=flat-square"></a>
@@ -10,13 +10,8 @@
 <a href="https://github.com/BochilGaming/games-wabot/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/BochilGaming/games-wabot?label=PullRequest&color=red&style=flat-square"></a>
 
 
-## Join Group Diskusi
-[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/GVwpKf83s42D1CnIfDW19G) 
-**NO BOT**
-
-
-#### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BochilGaming/games-wabot)
+#### Deploy To Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iCocopie/CocoBotzV15)
 
 #### Heroku Buildpack
 | BuildPack | LINK |
@@ -32,8 +27,8 @@ $ pkg install git -y
 $ pkg install nodejs -y
 $ pkg install ffmpeg -y
 $ pkg install imagemagick -y
-$ git clone https://github.com/BochilGaming/games-wabot -b multi-device
-$ cd games-wabot
+$ git clone https://github.com/iCocopie/CocoBotzV15
+$ cd CocoBotzV15
 $ npm i 
 ```
 If error try using yarn instead of npm, see [here](https://github.com/BochilGaming/games-wabot/tree/multi-device#if-npm-install-failed--try--using-yarn-instead-of-npm)
@@ -80,8 +75,8 @@ apt install wget curl git ffmpeg imagemagick build-essential libcairo2-dev libpa
 ubuntu
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 apt install -y nodejs gcc g++ make
-git clone https://github.com/BochilGaming/games-wabot -b multi-device
-cd games-wabot
+git clone https://github.com/iCocopie/CocoBotzV15
+cd CocoBotzV15
 npm install
 npm update
 ```
@@ -96,8 +91,8 @@ npm update
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/BochilGaming/games-wabot -b multi-device
-cd games-wabot
+git clone https://github.com/iCocopie/CocoBotzV15
+cd CocoBotzV15
 npm install
 npm update
 ```
@@ -241,6 +236,7 @@ global.owner = [
 #### Special Thanks to
 [![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
 [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
+[![Cocopie](https://github.com/iCocopie.png?size=100)](https://github.com/iCocopie)
 
 #### Contributor
 [![Adiixyz](https://github.com/Adiixyz.png?size=100)](https://github.com/Adiixyz)
