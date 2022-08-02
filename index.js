@@ -1,4 +1,4 @@
-console.log('Starting...')
+console.log('Starting CocoBotz...')
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
@@ -16,12 +16,12 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Lightweight\nWhatsApp Bot', {
-  font: 'chrome',
+say('RPG\nWhatsApp Bot', {
+  font: 'block',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-say(`'${name}' By @${author.name || author}`, {
+say(`CocoBotz Created By Cocopie`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
