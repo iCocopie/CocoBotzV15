@@ -33,20 +33,29 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 🤖」
-│ 👋🏻 Hai, %name!
-│
-│ 🧱 Limit : *%limit Limit*
-│ 🦸🏼‍♂️ Role : *%role*
-│ 🔼 Level : *%level (%exp / %maxexp)*
-│ 💫 Total XP : %totalexp ✨
-│ 
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
-│
-│ 📈 Uptime: *%uptime (%muptime)*
-│ 📊 Database: %rtotalreg of %totalreg
-╰────
+${ucapan()} *%name* 😊
+
+🎀 Hari : *%week %weton* 
+🗓️ Tanggal Masehi : *%date*
+📆 Tanggal Hijriyah : *%dateIslamic*
+⏲ Server Time : *%time*
+
+❏ 👤 *USER INFO*
+🪀 WhatsApp Version : *2.22.11.82*
+🎁 Limit : *%limit*
+🏷 Role : *%role*
+🗞 Level : *%level* 
+🚀 Total XP : *%totalexp*
+
+❏ 🤖️ *BOT INFO*
+🤾‍♂️ Bot Name : *CocoBotz*
+🧾 Mode : *Public Mode*
+⁉️ Prefix : *Multi Prefix*
+💻 Platform : *Linux*
+🌏 Browser : *Chrome*
+🌐 Server : *Baileys*
+⏰ Uptime : *%uptime (%muptime)*
+📥 Database : *%rtotalreg* Of *%totalreg*
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
   body: '│ • %cmd %islimit %isPremium',
