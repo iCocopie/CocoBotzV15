@@ -59,10 +59,9 @@ ${ucapan()} *%name* 😊
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
   body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  footer: '╰────────────\\n',
   after: `
-*%npmname* | %version
-${'```%npmdesc```'}
+©Cocopie || 2022
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
