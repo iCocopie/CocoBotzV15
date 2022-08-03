@@ -21,7 +21,7 @@ say('RPG\nWhatsApp Bot', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-say(`CocoBotz Created By Cocopie`, {
+say(`Starting CocoBotz...`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
