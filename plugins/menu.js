@@ -59,7 +59,7 @@ ${ucapan()} *%name* 😊
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
   body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────────────\\n',
+  footer: '╰────────────\n\n',
   after: `
 ©Cocopie || 2022
 `,
