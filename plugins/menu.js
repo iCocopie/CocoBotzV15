@@ -33,7 +33,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-${ucapan()} *%name* 😊
+Hamlo *%name* ☝️😅
 
 🎀 Hari : *%week %weton* 
 🗓️ Tanggal Masehi : *%date*
